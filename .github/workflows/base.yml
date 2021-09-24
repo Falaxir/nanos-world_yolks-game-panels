@@ -36,4 +36,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/Falaxir/yolks:${{ matrix.oses }}
+            ghcr.io/falaxir/yolks:${{ matrix.oses }}
