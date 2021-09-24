@@ -16,7 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         oses:
-          - alpine
           - debian
     steps:
       - uses: actions/checkout@v2
