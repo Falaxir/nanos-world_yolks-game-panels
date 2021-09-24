@@ -11,7 +11,7 @@ RUN         echo "deb http://ftp.fr.debian.org/debian/ testing main contrib non-
 				&& echo "Pin-Priority: 700" >> /etc/apt/preferences && echo " " >> /etc/apt/preferences && echo "Package: *" >> /etc/apt/preferences \
 				&& echo "Pin: release a=testing" >> /etc/apt/preferences && echo "Pin-Priority: 650" >> /etc/apt/preferences \
 				&& apt update && apt upgrade -y \
-				&& apt install -y gcc g++ libgcc1 lib32gcc1 libc++-dev gdb libc6 git wget curl tar zip unzip binutils xz-utils liblzo2-2 cabextract iproute2 net-tools netcat telnet libatomic1 libsdl1.2debian libsdl2-2.0-0 \
+				&& apt install -y gcc g++ libgcc1 lib32gcc1 libc++-dev gdb libc6 git wget curl tar zip unzip libssl1.1 binutils xz-utils liblzo2-2 cabextract iproute2 net-tools netcat telnet libatomic1 libsdl1.2debian libsdl2-2.0-0 \
 				libfontconfig libicu63 icu-devtools libunwind8 libssl-dev sqlite3 libsqlite3-dev libmariadbclient-dev libduktape203 locales ffmpeg gnupg2 apt-transport-https software-properties-common ca-certificates tzdata \
 				liblua5.3 libz-dev rapidjson-dev \
 				&& apt --target-release testing install libstdc++6 \
