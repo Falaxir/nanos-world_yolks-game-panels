@@ -1,11 +1,24 @@
-# Information
+# Nanos World Dedicated Server - support for games panels
 
-Just a small repo to add support for nanos world inside the docker image for pterodactyl game panel
+This repo is to support Nanos World on popular game panels like :
 
-# Why
+* https://pterodactyl.io
+* https://cubecoders.com/AMP
 
-To fix this `GLIBCXX_3.4.29' not found (required by NanosWorldServer) error
+## Pterodactyl support
 
-# How to use
+- [x] Installation
+- [x] Launch
+- [x] Update
+- [x] Console
+- [x] Custom launch variables
+- [ ] Read and Edit config file
 
-Just put this link in your docker get image : `ghcr.io/falaxir/yolks:debian`
+## AMP support
+
+- [x] Installation
+- [x] Launch
+- [x] Update
+- [ ] Console
+- [x] Custom launch variables
+- [ ] Read and Edit config file
