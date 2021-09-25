@@ -1,6 +1,6 @@
 FROM        debian:bullseye
 
-LABEL       author="Falaxir" maintainer="Falaxir"
+LABEL       author="Falaxir" maintainer="falaxir"
 
 LABEL       org.opencontainers.image.source="https://github.com/Falaxir/nanos-world_yolks-game-panels"
 LABEL       org.opencontainers.image.licenses=MIT
