@@ -1,0 +1,70 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "Nanos World",
+        "Description": "Server name as it appears in the server list",
+        "Keywords": "name",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerName",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "My Nanos World Server - Powered by AMP",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Description",
+        "Category": "Nanos World",
+        "Description": "Server description as it appears in the server list",
+        "Keywords": "description",
+        "FieldName": "ServerDescription",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerDescription",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "PoweredByAMP",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Map",
+        "Category": "Nanos World",
+        "Description": "Name of the map to load",
+        "Keywords": "map",
+        "FieldName": "Map",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "Map",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "nanos-world::TestingMap",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Announce",
+        "Category": "Nanos World",
+        "Description": "Server is displayed in the server list (0 = false, 1 = true)",
+        "Keywords": "announce",
+        "FieldName": "Announce",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "Announce",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "1",
+        "EnumValues": {
+            "0": "False",
+            "1": "True"
+        }
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Nanos World",
+        "Description": "Password that clients must supply in order to connect",
+        "Keywords": "password",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "IsFlagArgument": false,
+        "ParamFieldName": "ServerPassword",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
