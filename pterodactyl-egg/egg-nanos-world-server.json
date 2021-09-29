@@ -4,7 +4,7 @@
         "version": "PTDL_v1",
         "update_url": null
     },
-    "exported_at": "2021-09-25T21:05:51+02:00",
+    "exported_at": "2021-09-29T19:53:53+02:00",
     "name": "Nanos World Server",
     "author": "falaxir@gmail.com",
     "description": "Nanos World Server",
@@ -13,7 +13,7 @@
         "ghcr.io\/falaxir\/yolks:debian"
     ],
     "file_denylist": [],
-    "startup": ".\/NanosWorldServer --ip {{SERVER_IP}} --port {{SERVER_PORT}} --query_port {{QUERY_PORT}} --announce {{ANNOUNCE}} --max_players {{MAX_PLAYERS}} --save 1",
+    "startup": ".\/NanosWorldServer.sh --ip {{SERVER_IP}} --port {{SERVER_PORT}} --query_port {{QUERY_PORT}} --announce {{ANNOUNCE}} --max_players {{MAX_PLAYERS}} --save 1",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Server started successfully!\",\r\n    \"userInteraction\": []\r\n}",

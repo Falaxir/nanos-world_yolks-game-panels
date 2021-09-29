@@ -7,7 +7,7 @@ This repo is to support Nanos World on popular game panels like :
 
 # Installation
 
-The guide is available here : https://docs.nanos.world/docs/next/core-concepts/server-manual/server-installation
+The guide is available here : https://docs.nanos.world/docs/next/core-concepts/server-manual/game-panels
 
 # NOTE
 
@@ -40,4 +40,4 @@ The server do not stop, you must type `stop` manually or kill it.
 ### Knowed bugs
 
 The console is only displayed when there is some specific types of errors.
-The windows version can be buggy, you will have a sick christmas tree text inside the console
+The windows version can be buggy, you will have a sick christmas tree text inside the console.
