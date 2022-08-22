@@ -41,7 +41,7 @@
     {
         "DisplayName": "Announce",
         "Category": "Nanos World",
-        "Description": "Server is displayed in the server list (0 = false, 1 = true)",
+        "Description": "Server is displayed on the server list",
         "Keywords": "announce",
         "FieldName": "Announce",
         "InputType": "checkbox",
@@ -55,16 +55,19 @@
         }
     },
     {
-        "DisplayName": "Server Password",
+        "DisplayName": "Dedicated Server",
         "Category": "Nanos World",
-        "Description": "Password that clients must supply in order to connect",
-        "Keywords": "password",
-        "FieldName": "ServerPassword",
-        "InputType": "password",
+        "Description": "Is a dedicated server ? (port forwarding may be required) If not, it is a p2p server",
+        "Keywords": "",
+        "FieldName": "DedicatedServer",
+        "InputType": "checkbox",
         "IsFlagArgument": false,
-        "ParamFieldName": "ServerPassword",
+        "ParamFieldName": "DedicatedServer",
         "IncludeInCommandLine": true,
-        "DefaultValue": "",
-        "EnumValues": {}
+        "DefaultValue": "1",
+        "EnumValues": {
+            "0": "False",
+            "1": "True"
+        }
     }
 ]

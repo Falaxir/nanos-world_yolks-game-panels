@@ -11,18 +11,18 @@ The guide is available here : https://docs.nanos.world/docs/next/core-concepts/s
 
 # NOTE
 
-For now, the update branch is set on the bleeding edge. This will be changed back to alpha once it releases.
+The version of the game is on `release` if you want to change it to `bleeding-edge` you will probably need to edit manually the config files.
 
 ## Pterodactyl support
 
 - [x] Installation
 - [x] Launch
-- [ ] Update
+- [x] Update
 - [x] Console
-- [x] Custom launch variables*
-- [ ] Read and Edit config file
+- [x] Custom launch variables
+- [ ] Read and Edit config file*
 
-*Some, not all of them
+*Use the built-in file browser instead.
 
 ### Knowed bugs
 
@@ -33,11 +33,15 @@ The server do not stop, you must type `stop` manually or kill it.
 - [x] Installation
 - [x] Launch
 - [x] Update
-- [ ] Console
+- [ ] Console*
 - [x] Custom launch variables
-- [ ] Read and Edit config file
+- [ ] Read and Edit config file**
+
+*Console is blank, but can send commands.
+**Use the built-in file browser instead.
 
 ### Knowed bugs
 
-The console is only displayed when there is some specific types of errors.
-The windows version can be buggy, you will have a sick christmas tree text inside the console.
+#### AMP
+
+Console is blank, but for some reason when stoping, magically display all the logs of the console since the begining :x
