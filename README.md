@@ -24,10 +24,6 @@ The version of the game is on `release` if you want to change it to `bleeding-ed
 
 *Use the built-in file browser instead.
 
-### Knowed bugs
-
-The server do not stop, you must type `stop` manually or kill it.
-
 ## AMP support
 
 - [x] Installation
