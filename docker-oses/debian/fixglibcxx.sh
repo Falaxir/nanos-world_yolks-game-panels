@@ -11,4 +11,4 @@ Pin: release a=testing
 Pin-Priority: 400
 END
 apt update
-apt-get --target-release testing install libstdc++6
+apt-get --target-release testing install libstdc++6 -y
