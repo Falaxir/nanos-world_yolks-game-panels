@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "deb http://ftp.fr.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://ftp.fr.debian.org/debian/ testing main contrib non-free" >> /etc/apt/sources.list
 tee -a /etc/apt/preferences << END
