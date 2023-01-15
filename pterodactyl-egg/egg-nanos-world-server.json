@@ -4,16 +4,16 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2022-08-22T15:53:38+02:00",
+    "exported_at": "2023-01-15T08:37:41+01:00",
     "name": "Nanos World",
     "author": "falaxir@gmail.com",
-    "description": "Nanos World is the next generation multiplayer sandbox created by you and nanos. Players, developers and modders themselves can build their own game on UE5",
+    "description": "Nanos World is the next generation multiplayer sandbox created by you and nanos. Players, developers and modders themselves can build their own game leveraging all the capabilities of Unreal Engine 5!",
     "features": null,
     "docker_images": {
         "ghcr.io\/falaxir\/yolks:debian": "ghcr.io\/falaxir\/yolks:debian"
     },
     "file_denylist": [],
-    "startup": ".\/NanosWorldServer.sh --port {{SERVER_PORT}} --query_port {{QUERY_PORT}} --announce {{ANNOUNCE}} --dedicated_server {{DEDICATED}} --max_players {{MAX_PLAYERS}}",
+    "startup": ".\/NanosWorldServer.sh --port {{SERVER_PORT}} --query_port {{QUERY_PORT}} --announce {{ANNOUNCE}} --dedicated_server {{DEDICATED}} --max_players {{MAX_PLAYERS}} --map {{MAP}} $( [ \"$AUTO_DOWNLOAD\" == \"1\" ] && printf %s '--auto_download' ) $( [ \"$TOKEN\" == \"\" ] || printf %s \"--token $TOKEN\" ) $( [ \"$PASSWORD\" == \"\" ] || printf %s \"--password $PASSWORD\" )",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Server successfully connected to Steam!\",\r\n    \"userInteraction\": []\r\n}",
@@ -30,9 +30,9 @@
     "variables": [
         {
             "name": "Name",
-            "description": "Server Name",
+            "description": "The server's name, shown in the server list.",
             "env_variable": "NAME",
-            "default_value": "Nanos World Server powered by Pterodactyl.io",
+            "default_value": "nanos world server",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string",
@@ -40,17 +40,17 @@
         },
         {
             "name": "Description",
-            "description": "Server Description",
+            "description": "The server's description, shown in the server list.",
             "env_variable": "DESCRIPTION",
-            "default_value": "PoweredByPterodactyl.io",
+            "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|string",
+            "rules": "nullable|string",
             "field_type": "text"
         },
         {
             "name": "Map",
-            "description": "Server Map",
+            "description": "The server's initial map.",
             "env_variable": "MAP",
             "default_value": "NanosWorld::TestingMap",
             "user_viewable": true,
@@ -60,7 +60,7 @@
         },
         {
             "name": "Announce",
-            "description": "Display the server on the server list",
+            "description": "Whether to announce the server, making it appear in the server list.",
             "env_variable": "ANNOUNCE",
             "default_value": "1",
             "user_viewable": true,
@@ -70,32 +70,62 @@
         },
         {
             "name": "Max Players",
-            "description": "Max number of players",
+            "description": "The maximum number of players that can be connected to the server simultaneously.",
             "env_variable": "MAX_PLAYERS",
             "default_value": "10",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|numeric|max:9999",
+            "rules": "required|integer|between:1,999",
             "field_type": "text"
         },
         {
-            "name": "Query port",
-            "description": "This port needs to be different from the game port ! This port is not used for clients to connect to the server",
+            "name": "Query Port",
+            "description": "This port needs to be different from the game port! This port is not used for clients to connect to the server.",
             "env_variable": "QUERY_PORT",
             "default_value": "7778",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|numeric",
+            "rules": "required|integer",
             "field_type": "text"
         },
         {
             "name": "Dedicated Server",
-            "description": "Is a dedicated server ? (port forwarding required) If not, it is a p2p server",
+            "description": "Whether this is a dedicated server (port forwarding required). If not, it is a P2P server.",
             "env_variable": "DEDICATED",
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Auto Download",
+            "description": "Whether to auto download missing packages and assets.",
+            "env_variable": "AUTO_DOWNLOAD",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Token",
+            "description": "Server authorization token, used to auto download packages and assets from the store.",
+            "env_variable": "TOKEN",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|alpha_dash|size:40",
+            "field_type": "text"
+        },
+        {
+            "name": "Password",
+            "description": "The server's password, required to join it.",
+            "env_variable": "PASSWORD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|alpha_dash",
             "field_type": "text"
         }
     ]
