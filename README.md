@@ -26,18 +26,4 @@ The version of the game is on `release` if you want to change it to `bleeding-ed
 
 ## AMP support
 
-- [x] Installation
-- [x] Launch
-- [x] Update
-- [ ] Console*
-- [x] Custom launch variables
-- [ ] Read and Edit config file**
-
-*Console is blank, but can send commands.
-**Use the built-in file browser instead.
-
-### Knowed bugs
-
-#### AMP
-
-Console is blank, but for some reason when stoping, magically display all the logs of the console since the begining :x
+For any information about AMP support, please go to my repository [**AMP Templates**](https://github.com/Falaxir/AMPTemplates)
