@@ -10,6 +10,7 @@ RUN         locale-gen en_US.UTF-8
 RUN         apt upgrade -y \
 				&& apt install -y build-essential wget libstdc++6 git tar ca-certificates openssl fontconfig curl lib32gcc-s1 iproute2 \
 				&& update-locale lang=en_US.UTF-8 \
+				&& wget -O - https://raw.githubusercontent.com/Falaxir/nanos-world_yolks-game-panels/master/docker-oses/debian/fixglibcxx.sh | bash \
 				&& dpkg-reconfigure --frontend noninteractive locales \
 				&& useradd -m -d /home/container -s /bin/bash container && export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/
 
