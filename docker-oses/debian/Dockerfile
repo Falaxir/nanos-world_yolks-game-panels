@@ -1,4 +1,4 @@
-FROM        debian:bookworm-slim
+FROM        debian:trixie-slim
 
 LABEL       author="Falaxir" maintainer="falaxir"
 
